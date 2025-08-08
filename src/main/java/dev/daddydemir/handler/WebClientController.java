@@ -1,6 +1,5 @@
 package dev.daddydemir.handler;
 
-
 import dev.daddydemir.service.IClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,40 +7,39 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/rest-template")
+@RequestMapping("/web-client")
 @RequiredArgsConstructor
-public class RestTemplateController {
+public class WebClientController {
 
-    private final IClient restTemplateImpl;
+    private final IClient webIClientImpl;
 
     @GetMapping("/get")
     public void get() {
-        restTemplateImpl.get();
+        webIClientImpl.get();
     }
 
     @GetMapping("/get-with-query")
     public void getWithQuery() {
-        restTemplateImpl.getWithQuery();
+        webIClientImpl.getWithQuery();
     }
 
     @GetMapping("/get-with-path")
     public void getWithPath() {
-        restTemplateImpl.getWithPath();
+        webIClientImpl.getWithPath();
     }
 
     @GetMapping("/post-with-body")
     public void postWithBody() {
-        restTemplateImpl.postWithBody();
+        webIClientImpl.postWithBody();
     }
 
     @GetMapping("/post-with-form-data")
     public void postWithFormData() {
-        restTemplateImpl.postWithFormData();
+        webIClientImpl.postWithFormData();
     }
 
     @GetMapping("/post-with-multipart")
     public void postWithMultipart() {
-        restTemplateImpl.postWithMultipart();
+        webIClientImpl.postWithMultipart();
     }
-
 }

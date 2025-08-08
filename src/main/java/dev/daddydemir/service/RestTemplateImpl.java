@@ -1,6 +1,5 @@
 package dev.daddydemir.service;
 
-import dev.daddydemir.handler.IClient;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.ByteArrayResource;
